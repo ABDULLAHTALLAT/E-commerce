@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="main/profile.css"> 
+</head>
+<body>
+
+    <div class="profile-section">
+        <h2>Profile</h2>
+        <div class="profile-details">
+          <div class="profile-item">
+            <label for="name">Name:</label>
+            <span id="name">Loading...</span>
+          </div>
+          <div class="profile-item">
+            <label for="email">Email:</label>
+            <span id="email">Loading...</span>
+          </div>
+        </div>
+      </div>
+    <div class="profile-container">
+        <h1>My Wishlist</h1>
+        <p>There are <span id="product-count">0</span> products in this wishlist.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="profile-products">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="profile.js"></script> 
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E-Commerce</title>
+    <link rel="stylesheet" href="main/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo/freshcart-logo.svg" alt="Logo" />
+            </div>
+            <div class="search-menu">
+                <input type="text" placeholder="SEARCH CATEGORE...">
+                <button>Search</button>
+            </div>
+            <div class="nav-buttons">
+                <div id="auth-buttons">
+                <button id="loginBtn">Login</button>
+                <button id="signUpBtn">Sign Up</button>
+                </div>
+                
+                    <button class="cart-button" onclick="goToCart()">Cart</button>
+                    
+                
+            
+                <!-- Account Icon for Logged-in Users -->
+                <div id="accountIcon" style="display: none;">
+                    <img src="images/appbutton/png-transparent-man-s-face-avatar-computer-icons-user-profile-business-user-avatar-blue-face-heroes-thumbnail.png" alt="Account" id="accountIconImage">
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="menu-container">
+            <button id="menu-button">ALL DEPARTMENT</button>
+            <div class="dropdown-content" id="dropdown-content">
+              <a href="pages/Electronic Devices.html">Electronic Devices</a>
+              <a href="pages/SUPER MARKET .html">SUPER MARKET </a>
+              <a href="pages/ Accessories and Makeup.html"> Accessories and Makeup</a>
+              <a href="pages/Smart Devices.html">Smart Devices</a>
+            </div>
+          </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLoginModal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/appbutton/signin-g.svg" alt="Login Illustration">
+                </div>
+                <div class="modal-form">
+                    <h2>Sign in to FreshCart</h2>
+                    <p>Welcome back to FreshCart! Enter your email to get started.</p>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <label>
+                            <input type="checkbox" id="rememberMe"> Remember me
+                        </label>
+                        <button type="submit">Sign In</button>
+                    </form>
+                    
+                    <p>Don’t have an account? <a href="#" id="goToSignUp">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Sign Up -->
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignUpModal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/appbutton/signup-g.svg" alt="Sign Up Illustration">
+                </div>
+                <div class="modal-form">
+                    <h2>Get Started Shopping</h2>
+                    <p>Welcome to FreshCart! Enter your details to create your account.</p>
+                    <form id="signUpForm">
+                        <input type="text" id="firstName" placeholder="First Name" required>
+                        <input type="text" id="lastName" placeholder="Last Name" required>
+                        <input type="email" id="signUpEmail" placeholder="Email" required>
+                        <input type="password" id="signUpPassword" placeholder="Password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                    <p>By continuing, you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+        <section class="section">
+                            <div class="slider-container">
+                                    <div class="slider">
+                                        <div class="slide">
+                                            <img src="images/slieder/slide-1.jpg" alt="Image 1" class="image1">
+                                            <div class="slider-text">
+                                                <div class="free-shipping-banner">Free Shipping - orders over $100</div>
+                                                <h1>Free Shipping on<br> orders over <span>$100</span></h1>
+                                                <p>Free Shipping to First-Time Customers Only, After<br> promotions and discounts are applied.</p>
+                                                <a href="#" class="shop-now-button">Shop Now-></a>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/slieder/slider-2.jpg" alt="Image 2" class="image2">
+                                            <div class="slider-text">
+                                                <div class="free-shipping-banner">Free Shipping - orders over $100</div>
+                                                <h1>Free Shipping on<br> orders over <span>$100</span></h1>
+                                                <p>Free Shipping to First-Time Customers Only, After<br> promotions and discounts are applied.</p>
+                                                <a href="#" class="shop-now-button">Shop Now-></a>
+                                            </div>
+                                        </div>    
+                            </div>
+        </section>
+        <section class="section">
+            <h1>Featured Categories</h1>
+            <div class="card-container">
+                <div class="card" onclick="location.href='pages/Electronic Devices.html';">
+                  <img src="images/logo/90970312.webp" alt="Electronic Devices">
+                  <div class="card-text">Electronic Devices</div>
+                </div>
+                <div class="card" onclick="location.href='pages/SUPER MARKET .html';">
+                  <img src="images/logo/shopping-cart-full-products-inside-supermarket_123827-28166.avif" alt="Food Products">
+                  <div class="card-text">SUPER MARKET </div>
+                </div>
+                <div class="card" onclick="location.href='pages/ Accessories and Makeup.html';">
+                  <img src="images/logo/makeup-cosmetics.webp" alt="Products and Accessories">
+                  <div class="card-text"> Accessories and Makeup</div>
+                </div>
+                <div class="card" onclick="location.href='pages/Smart Devices.html';">
+                  <img src="images/logo/smart_devices.jpg" alt="Phones, Watches, and Smart Things">
+                  <div class="card-text">Smart Devices </div>
+                </div>
+              </div>
+        </section>    
+        <section>
+            <div class="container2">
+                <div class="row2">
+                    <div class="column2">
+                        <div class="card card-banner-1">
+                            <div class="content">
+                                <h3 class="fw-bold mb-1">Fruits &amp; Vegetables</h3>
+                                <p class="mb-4">
+                                    Get Upto <span class="fw-bold">30%</span> Off
+                                </p>
+                                <a href="#!" class="btn btn-dark">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="card card-banner-2">
+                            <div class="content">
+                                
+                                <h3 class="fw-bold mb-1">Freshly Baked Buns</h3>
+                                <p class="mb-4">
+                                    Get Upto <span class="fw-bold">25%</span> Off
+                                </p>
+                                <a href="#!" class="btn btn-dark">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <section class="section">
+                    <h1>BEST SELLAR</h1>
+
+                                <!-- Container for product cards -->
+                        <div class="product-container">
+                            <div class="product-card" data-product-id="1">
+                                <div class="product-image">
+                                    <img src="images/حقعيشؤف4/iphone14-6.jpg" alt="Product Image">
+                                </div>
+                                <div class="product-details">
+                                    <h3 class="product-name">ايفون</h3>
+                                    <p class="product-price">$99.99</p>
+                                    <div class="product-actions">
+                                        <a href="#!" class="view-details" data-product-id="1">View Details</a>
+                                        <button class="add-to-cart-button">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <img src="images/proudact2/images (1).jpeg" alt="Product Image">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product Name 2</h3>
+                        <p class="product-price">$79.99</p>
+                        <div class="product-actions">
+                            <a href="#!" class="view-details" data-product-id="2">View Details</a>
+                            <button class="add-to-cart-button">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <img src="images/products/product-img-10.jpg" alt="Product Image">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product Name 2</h3>
+                        <p class="product-price">$79.99</p>
+                        <div class="product-actions">
+                            <a href="#!" class="view-details" data-product-id="3">View Details</a>
+                            <button class="add-to-cart-button">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <img src="images/prudact3/41J58vOj2cL._AC_UF894,1000_QL80_.jpg" alt="Product Image">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">كتل عربي</h3>
+                        <p class="product-price">$79.99</p>
+                        <div class="product-actions">
+                            <a href="#!" class="view-details" data-product-id="4">View Details</a>
+                            <button class="add-to-cart-button">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <img src="images/prudact3/Food_Preparation_Appliances.png" alt="Product Image">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">فرن</h3>
+                        <p class="product-price">$79.99</p>
+                        <div class="product-actions">
+                            <a href="#!" class="view-details" data-product-id="5">View Details</a>
+                            <button class="add-to-cart-button">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <img src="images/حقعيشؤف4/iphone14-6.jpg" alt="Product Image">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">iphone14</h3>
+                        <p class="product-price">$79.</p>
+                        <div class="product-actions">
+                            <a href="#!" class="view-details" data-product-id="6">View Details</a>
+                            <button class="add-to-cart-button">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product-card" data-product-id="1">
+                        <div class="product-image">
+                            <img src="images/prudact3/Irons_.webp" alt="Product Image">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name">iron</h3>
+                            <p class="product-price">$99.99</p>
+                            <div class="product-actions">
+                                <a href="#!" class="view-details" data-product-id="7">View Details</a>
+                                <button class="add-to-cart-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+        <div class="product-card" data-product-id="2">
+            <div class="product-image">
+                <img src="images/prudact3/61jdHppdlrL.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h3 class="product-name">katel</h3>
+                <p class="product-price">$79.99</p>
+                <div class="product-actions">
+                    <a href="#!" class="view-details" data-product-id="8">View Details</a>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card" data-product-id="2">
+            <div class="product-image">
+                <img src="images/products/product-img-10.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h3 class="product-name">beter</h3>
+                <p class="product-price">$79.99</p>
+                <div class="product-actions">
+                    <a href="#!" class="view-details" data-product-id="9">View Details</a>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product-card" data-product-id="1">
+                <div class="product-image">
+                    <img src="images/حقعيشؤف4/HP-ZBook-Studio-G7-bd-Price.webp" alt="Product Image">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Product Name 1</h3>
+                    <p class="product-price">$99.99</p>
+                    <div class="product-actions">
+                        <a href="#!" class="view-details" data-product-id="10">View Details</a>
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+<div class="product-card" data-product-id="2">
+    <div class="product-image">
+        <img src="images/prudact3/cRob1u48HpvkT19q1zHcAfGyOFildv0kN2ir1WoT.webp" alt="Product Image">
+    </div>
+    <div class="product-details">
+        <h3 class="product-name">feredge</h3>
+        <p class="product-price">$79.99</p>
+        <div class="product-actions">
+            <a href="#!" class="view-details" data-product-id="11">View Details</a>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<div class="product-card" data-product-id="2">
+    <div class="product-image">
+        <img src="images/products/product-img-10.jpg" alt="Product Image">
+    </div>
+    <div class="product-details">
+        <h3 class="product-name">Product Name 2</h3>
+        <p class="product-price">$79.99</p>
+        <div class="product-actions">
+            <a href="#!" class="view-details" data-product-id="12">View Details</a>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/حقعيشؤف4/rwgpyu-1655196719.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="13">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/حقعيشؤف4/mb808_0004_layer_1_1.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="14">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/حقعيشؤف4/samsung-a54-5g-_8_128_-awesome-graphite-1.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="15">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/حقعيشؤف4/Mobile_.webp" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="16">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/حقعيشؤف4/D-2.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="17">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/حقعيشؤف4/jbl-205-bt-wireless-speaker-with-microphone.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="18">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/products/product-single-img-4.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="19">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/proudact2/images.jpeg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="20">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card" data-product-id="1">
+        <div class="product-image">
+            <img src="images/حقعيشؤف4/rwgpyu-1655196719.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">headphone</h3>
+            <p class="product-price">$99.99</p>
+            <div class="product-actions">
+                <a href="#!" class="view-details" data-product-id="21">View Details</a>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+
+            <!-- Product Info Modal -->
+            <div id="productModal" class="modal2">
+                <div class="modal-content2">
+                    <span class="close2" id="closeModal">&times;</span>
+                    <div class="modal-body2">
+                        <img src="images/products/product-img-13.jpg" alt="Product Image" id="modalProductImage" class="modal-photo2">
+                        <h2 id="modalProductName">Product Name</h2>
+                        <p id="modalProductDescription">Product Description</p>
+                        <p id="modalProductPrice">$99.99</p>
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+                    
+            <div id="productModal" class="modal2">
+                <div class="modal-content2">
+                    <span class="close2" id="closeModal">&times;</span>
+                    <div class="modal-body2">
+                        <img src="images/proudact2/316YrQite8L._AC_SR300,300.jpg" alt="Product Image" id="modalProductImage" class="modal-photo">
+                        <h2 id="modalProductName">Product Name</h2>
+                        <p id="modalProductDescription">Product Description</p>
+                        <p id="modalProductPrice">$99.99</p>
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+                    
+                
+                    
+                </section>
+
+
+                <section class="discounts-section">
+                    <h1>Today's Discounts</h1>
+                    
+                   
+                    <section class="daily-best-sells">
+                        <h2>Daily Best Sells</h2>
+                        <div class="products">
+                            <div class="product-card">
+                                <img src="images/proudact2/-.webp" alt="Roast Ground Coffee">
+                                <h3>adidas</h3>
+                                <p class="category">accessories and makeup</p>
+                                <p class="price">
+                                  <span class="discounted-price">$13</span>
+                                  <span class="original-price">$18</span>
+                                </p>
+                                <div class="rating">⭐️⭐️⭐️⭐️☆ 4.5</div>
+                                <div class="countdown-container">
+                                    <div class="countdown-container">
+                                        <div class="countdown" data-countdown="2028-05-01T00:00:00">
+                                            <div class="time-box">
+                                                <span class="days"></span>
+                                                <span class="label">Days</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="hours"></span>
+                                                <span class="label">Hours</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="minutes"></span>
+                                                <span class="label">Mins</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="seconds"></span>
+                                                <span class="label">Sec</span>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <button class="add-to-cart-button">+ Add to cart</button>
+                              </div>
+                              <!-- prudact2 -->
+                              <div class="product-card">
+                                <img src="images/prudact3/tam.64ss-env_copy_.jpg" alt="Roast Ground Coffee">
+                                <h3>Roast Ground Coffee</h3>
+                                <p class="category">Electronic Devices</p>
+                                <p class="price">
+                                  <span class="discounted-price">$13</span>
+                                  <span class="original-price">$18</span>
+                                </p>
+                                <div class="rating">⭐️⭐️⭐️⭐️☆ 4.5</div>
+                                <div class="countdown-container">
+                                    <div class="countdown-container">
+                                        <div class="countdown" data-countdown="2028-05-01T00:00:00">
+                                            <div class="time-box">
+                                                <span class="days"></span>
+                                                <span class="label">Days</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="hours"></span>
+                                                <span class="label">Hours</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="minutes"></span>
+                                                <span class="label">Mins</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="seconds"></span>
+                                                <span class="label">Sec</span>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <button class="add-to-cart-button">+ Add to cart</button>
+                              </div>
+
+                              <div class="product-card">
+                                <img src="images/products/product-img-4.jpg" alt="Roast Ground Coffee">
+                                <h3>Roast Ground Coffee</h3>
+                                <p class="category">Tea, Coffee & Drinks</p>
+                                <p class="price">
+                                  <span class="discounted-price">$13</span>
+                                  <span class="original-price">$18</span>
+                                </p>
+                                <div class="rating">⭐️⭐️⭐️⭐️☆ 4.5</div>
+                                <div class="countdown-container">
+                                    <div class="countdown-container">
+                                        <div class="countdown" data-countdown="2028-05-01T00:00:00">
+                                            <div class="time-box">
+                                                <span class="days"></span>
+                                                <span class="label">Days</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="hours"></span>
+                                                <span class="label">Hours</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="minutes"></span>
+                                                <span class="label">Mins</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="seconds"></span>
+                                                <span class="label">Sec</span>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <button class="add-to-cart-button">+ Add to cart</button>
+                              </div>
+
+                              <div class="product-card">
+                                <img src="images/products/product-img-12.jpg" alt="Roast Ground Coffee">
+                                <h3>Roast Ground Coffee</h3>
+                                <p class="category">Tea, Coffee & Drinks</p>
+                                <p class="price">
+                                  <span class="discounted-price">$13</span>
+                                  <span class="original-price">$18</span>
+                                </p>
+                                <div class="rating">⭐️⭐️⭐️⭐️☆ 4.5</div>
+                                <div class="countdown-container">
+                                    <div class="countdown-container">
+                                        <div class="countdown" data-countdown="2028-05-01T00:00:00">
+                                            <div class="time-box">
+                                                <span class="days"></span>
+                                                <span class="label">Days</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="hours"></span>
+                                                <span class="label">Hours</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="minutes"></span>
+                                                <span class="label">Mins</span>
+                                            </div>
+                                            <div class="time-box">
+                                                <span class="seconds"></span>
+                                                <span class="label">Sec</span>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <button class="add-to-cart-button">+ Add to cart</button>
+                              </div>
+                        </div>
+                      </section>
+
+
+                
+
+       
+                <button id="backToTopBtn" title="Go to top">Top</button>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Meine E-Commerce-Seite</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/logo/downloadfacebook.png" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/logo/1200px-Instagram.svg.png" alt="Instagram Logo">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="images/logo/free-twitter-logo-icon-2429-thumb.png" alt="Twitter Logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

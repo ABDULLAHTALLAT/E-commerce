@@ -1,0 +1,138 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cart-container {
+  width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.free-delivery-banner {
+  background-color: #ffe3e3;
+  color: #d9534f;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.free-delivery-banner a {
+  color: #d9534f;
+  text-decoration: underline;
+}
+
+#cart-items {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+}
+
+.cart-item img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.cart-item h3 {
+  flex: 1;
+  font-size: 16px;
+  margin: 0;
+}
+
+.cart-item .product-details {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item .product-controls {
+  display: flex;
+  align-items: center;
+}
+
+.product-controls button {
+  width: 30px;
+  height: 30px;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.product-controls button:hover {
+  background-color: #ccc;
+}
+
+.product-controls input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.cart-item .product-price {
+  font-size: 16px;
+  margin-left: 20px;
+  text-align: right;
+}
+
+.remove-btn {
+  color: #d9534f;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.continue-shopping {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.update-cart {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
